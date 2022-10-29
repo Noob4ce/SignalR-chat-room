@@ -1,0 +1,42 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="container">
+         <div>
+         <div  id="messageBox">
+         </div>
+         </div>
+
+         <div class="row text-input">
+             <div class="row">
+             <div class="col-1"><p >To: </p></div>
+            
+             <div class="col-4">@Html.DropDownList("receiver",Model.UserSelection, "All")</div>
+         </div>
+         <div class="row">             
+             <div class="col-10"><input type="text" id="message" class="form-control" /></div>
+             <div class="col-2">
+                 <input type="button" id="sendMessage" value="Send Message" class="btn btn-primary" />
+                 <input type="hidden" asp-for="@Model.currentUser" id="currentUser" />
+               </div>
+               </div>
+
+         </div>
+     <div class="row">
+
+     </div>
+     <div class="row">
+
+     </div>
+</div>
+​
+@Html.Hidden("sender", Model.currentUser) 
+​
+@section Scripts
+{
+    <script src="~/js/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js" asp-append-version="true"></script>
+}
+</div>
