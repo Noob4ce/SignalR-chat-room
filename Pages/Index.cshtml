@@ -1,8 +1,10 @@
-﻿@page
+﻿
+@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    
 }
+@using Microsoft.AspNetCore.SignalR.Client;
 <div class="container">
          <div>
          <div  id="messageBox">
@@ -38,5 +40,8 @@
 {
     <script src="~/js/microsoft/signalr/dist/browser/signalr.js"></script>
     <script src="~/js/chat.js" asp-append-version="true"></script>
+
 }
+
+   
 </div>

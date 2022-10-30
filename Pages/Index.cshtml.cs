@@ -7,6 +7,8 @@ using chat_room.Hubs;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.AspNetCore.Components;
+using System.Reflection;
+using System.Net.NetworkInformation;
 
 namespace chat_room.Pages
 {
@@ -36,16 +38,19 @@ namespace chat_room.Pages
         }
 
 
-        public void OnGet()
+        public async void OnGet()
         {
             //get all users from the database, to a selection list
             UserSelection = _userManager.Users.ToList().Select(user => new SelectListItem { Text = user.UserName, Value = user.UserName }).OrderBy(s => s.Text).ToList();
 
+
             //get the name of the current user
             currentUser = User.Identity.Name;
+
+
+
+
         }
-
-
         private class Message
         {
             public Message(string username, string body, bool isOwn)

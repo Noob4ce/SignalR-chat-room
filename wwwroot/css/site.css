@@ -20,13 +20,12 @@ body {
 
 .text-input {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     width: 80%;
 }
 
 .ownMessage {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 10px;
     font-size: 16pt;
     color: aliceblue;
     background-color: dodgerblue;
@@ -34,11 +33,18 @@ body {
 }
 
 .message {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding 10px;
     font-size: 16pt;
+    color: black;
+    background-color: darkgrey;
+    border-radius: 25px;
+}
+
+.notification-connected {
+    padding 10px;
+    font-size: 12pt;
     color: aliceblue;
-    background-color: green;
+    background-color: lightgreen;
     border-radius: 25px;
 }
 
